@@ -84,7 +84,7 @@
   margin-top: 1em;
 }
 
-.second-col .faq-container .faq-btn h1 {
+.second-col .faq-container .faq-btn h2 {
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 400;
   color: #4a4b5e;
@@ -168,22 +168,19 @@
     right: 82%;
     top: 10%;
   }
-}
-
-.second-col {
-  padding: 2em 3em 5em;
-  max-width: 420px;
-}
-
-.second-col .faq-heading {
-  text-align: left;
-}
-
-.box {
-  display: block;
-  position: absolute;
-  top: 35%;
-  left: -15%;
-  z-index: 10;
+  .second-col {
+    padding: 2em 3em 5em;
+    max-width: 420px;
+  }
+  .second-col .faq-heading {
+    text-align: left;
+  }
+  .box {
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: -15%;
+    z-index: 10;
+  }
 }
 /*# sourceMappingURL=style.css.map */

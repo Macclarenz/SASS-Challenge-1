@@ -96,7 +96,7 @@ $br: hsl(240, 5%, 91%);
             width: 100%;
             margin-top: 1em;
 
-            h1 {
+            h2 {
                 @include font(400, $faq-heading, 14px);
                 text-align: left;
                 margin-right: .5em;
@@ -108,19 +108,19 @@ $br: hsl(240, 5%, 91%);
                 transform-box: fill-box;
             }
 
-            &:focus + p,
-            &:focus-within + p {
+            &:focus+p,
+            &:focus-within+p {
                 // max-height: auto;
                 max-height: clamp(6em, 10vh, 100px);
                 opacity: 1;
                 transform: scaleY(1);
                 margin-block: 1em;
                 transition: transform 250ms ease-in-out,
-                            max-height 250ms ease-in-out,
-                            opacity 250ms ease-in-out 250ms; 
+                    max-height 250ms ease-in-out,
+                    opacity 250ms ease-in-out 250ms;
             }
 
-            &:focus + img,
+            &:focus+img,
             &:focus-within img {
                 transform: rotateX(180deg) translateY(-0.5em);
             }
@@ -155,7 +155,7 @@ $tablet-breakpoint: 750px;
         min-height: 80px;
         overflow: hidden;
 
-    
+
         picture img {
             width: 100%;
             // max-width: 250px;
@@ -163,30 +163,30 @@ $tablet-breakpoint: 750px;
             right: 25%;
             top: 25%;
             transform: scale(1.50) !important;
-    
+
         }
-    
+
         .faq-img-pattern {
             transform: scale(3) !important;
             right: 82%;
             top: 10%;
         }
     }
-}
 
-.second-col {
-    padding: 2em 3em 5em;
-    max-width: 420px;
+    .second-col {
+        padding: 2em 3em 5em;
+        max-width: 420px;
 
-    .faq-heading {
-        text-align: left;
+        .faq-heading {
+            text-align: left;
+        }
     }
-}
 
-.box {
-    display: block;
-    position: absolute;
-    top: 35%;
-    left: -15%;
-    z-index: 10;
+    .box {
+        display: block;
+        position: absolute;
+        top: 35%;
+        left: -15%;
+        z-index: 10;
+    }
 }
