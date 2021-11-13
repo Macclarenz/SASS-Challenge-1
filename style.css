@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bg {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background-image: linear-gradient(to bottom, #af67e9, #6565e7);
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  background-color: white;
+  border-radius: 1.5em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.247) 0 2em 2em;
+          box-shadow: rgba(0, 0, 0, 0.247) 0 2em 2em;
+  width: 90%;
+  max-width: 800px;
+  margin: 10em auto 3em;
+  position: relative;
+}
+
+.first-col {
+  position: relative;
+  min-height: 80px;
+}
+
+.first-col picture img {
+  width: 90%;
+  max-width: 250px;
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translate(50%, -60%);
+          transform: translate(50%, -60%);
+}
+
+.first-col .faq-img-pattern {
+  -webkit-transform: translate(50%, 0%);
+          transform: translate(50%, 0%);
+}
+
+.second-col {
+  padding: 2em 2em 3em 2em;
+}
+
+.second-col .faq-heading {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 700;
+  color: #1d1e35;
+  font-size: 30px;
+  text-align: center;
+  margin-block: 1em;
+}
+
+.second-col .faq-container {
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.second-col .faq-container .faq-btn {
+  border: none;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.second-col .faq-container .faq-btn h1 {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  color: #4a4b5e;
+  font-size: 14px;
+  text-align: left;
+  margin-right: .5em;
+}
+
+.second-col .faq-container .faq-btn img {
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform: translateY(0.5em);
+          transform: translateY(0.5em);
+  transform-box: fill-box;
+}
+
+.second-col .faq-container .faq-btn:focus + p,
+.second-col .faq-container .faq-btn:focus-within + p {
+  max-height: clamp(6em, 10vh, 100px);
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  margin-block: 1em;
+  -webkit-transition: max-height 250ms ease-in-out, opacity 250ms ease-in-out 250ms, -webkit-transform 250ms ease-in-out;
+  transition: max-height 250ms ease-in-out, opacity 250ms ease-in-out 250ms, -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, max-height 250ms ease-in-out, opacity 250ms ease-in-out 250ms;
+  transition: transform 250ms ease-in-out, max-height 250ms ease-in-out, opacity 250ms ease-in-out 250ms, -webkit-transform 250ms ease-in-out;
+}
+
+.second-col .faq-container .faq-btn:focus + img,
+.second-col .faq-container .faq-btn:focus-within img {
+  -webkit-transform: rotateX(180deg) translateY(-0.5em);
+          transform: rotateX(180deg) translateY(-0.5em);
+}
+
+.second-col .faq-container p {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  color: #787887;
+  font-size: 13px;
+  line-height: 1.5;
+  max-height: 1em;
+  opacity: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.box {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 350px 1fr;
+        grid-template-columns: 350px 1fr;
+  }
+  .first-col {
+    position: relative;
+    min-height: 80px;
+    overflow: hidden;
+  }
+  .first-col picture img {
+    width: 100%;
+    position: absolute;
+    right: 25%;
+    top: 25%;
+    -webkit-transform: scale(1.5) !important;
+            transform: scale(1.5) !important;
+  }
+  .first-col .faq-img-pattern {
+    -webkit-transform: scale(3) !important;
+            transform: scale(3) !important;
+    right: 82%;
+    top: 10%;
+  }
+}
+
+.second-col {
+  padding: 2em 3em 5em;
+  max-width: 420px;
+}
+
+.second-col .faq-heading {
+  text-align: left;
+}
+
+.box {
+  display: block;
+  position: absolute;
+  top: 35%;
+  left: -15%;
+  z-index: 10;
+}
+/*# sourceMappingURL=style.css.map */
